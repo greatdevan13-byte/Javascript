@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Shop</title>
+</head>
+<body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <script>
+        let contact1= {
+            name: "John",
+            phone: 987654321,
+            email:"hgf@gmail.com",
+
+        getInfo: function() {document.getElementById("a").innerHTML= ("Name="+this.name+" " +"Phone="+this.phone+" " +"Email="+ this.email);}
+        };
+       
+
+          let contact2= {
+            name:"Raju",
+            phone:9087464312,
+            email: "xyz@gmail.com",
+
+             getInfo: function() {document.getElementById("b").innerHTML= ("Name="+this.name+" "+ "Phone="+  this.phone+" " + "Email="+this.email);} 
+        };
+        contact1.getInfo();
+        contact2.getInfo();
+    </script>
+  
+
+    
+
+
+ </script>
+    
+</body>
+</html>

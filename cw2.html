@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+</head>
+<body>
+    <p id="a"></p>
+    
+    <script>
+        let book= {
+            title: "The Alchemist",
+            author: "Paulo Coehlo",
+            year: 1988,
+
+            getSummary: function() {document.getElementById("a").innerHTML=("The book is"+" "+ this.title +" "+ "was written by"+" "+ this.author + "in" + " "+ this.year);}
+
+        };
+        book.getSummary();
+
+    </script>
+    
+</body>
+</html>
