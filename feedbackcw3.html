@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+</head>
+<body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <script>
+        var feedback= "  I loved the FOOD and the service!  ";
+        feedback= feedback.trim().toLowerCase().replace("food", "ambience").split(" ");
+        document.getElementById("a").innerHTML="Feedback ="+" "+feedback;
+        var pos= feedback.indexOf("service");
+        document.getElementById("b").innerHTML="Position of Service =" +pos;
+
+      
+    </script>
+    
+</body>
+</html>
+
