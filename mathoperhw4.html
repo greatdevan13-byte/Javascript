@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Game</title>
+</head>
+<body>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <p id="d"></p>
+    <script>
+        var max= 50;
+        var min= 1 ;
+        var mystery=  Math.floor(Math.random()*(max-min+1)+min);
+        document.getElementById("a").innerHTML="Random no :"+mystery;
+        var userScore= "50";
+        document.getElementById("b").innerHTML="Score to no :"+Number(userScore);
+        document.getElementById("c").innerHTML= "Diff btw user and mystery no :"+Math.abs(userScore-mystery);
+        console.log("sqrt of userscore :"+Math.round( Math.sqrt(userScore)));
+        console.log("PI value :"+Math.PI);
+        var Conversion = "20"*5;
+        document.getElementById("d").innerHTML="Converted string to no :"+ Conversion;
+        document.write("Max no btw 10,20,random no :"+Math.max(10,20,mystery),"<br>");
+        document.write("Min no btw 10,20,random no :"+Math.min(10,20,mystery));
+
+
+
+        
+
+        
+    </script>
+    
+</body>
+</html>
