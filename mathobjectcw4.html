@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Widget</title>
+</head>
+<body>
+    <script>
+        var min=0;
+        var max=100;
+        var random=(Math.floor(Math.random()*(max-min))+min);
+        document.write(random,"<br>")
+        userScore= String("75" );
+        document.write(userScore,"<br>");
+        userScore=Number(75);
+        document.write(userScore,"<br>");
+        document.write(Math.abs(random-userScore),"<br>");
+        var square= Math.round(Math.sqrt(userScore));
+        document.write("Square Root :"+square,"<br>");
+        document.write("PI constant :"+Math.PI,"<br>");
+        var convert= "50"*2;
+        document.write("Converted value of 50 :"+ convert);
+
+    </script>
+    
+</body>
+</html>
