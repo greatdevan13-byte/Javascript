@@ -1,40 +1,46 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 <body>
+    <input type="text" id="reminderDate" placeholder="type date">
+    <button type="button" onclick="details()">Click Here</button>
 
-<h2>Johns Bday</h2>
+    <p id="a"></p>
+    <p id="b"></p>
+    <p id="c"></p>
+    <script>
+        function details(){
+             var dateInput = document.getElementById("reminderDate").value;
+              var reminderDate = new Date(dateInput);
 
-<p id="a"></p>
+              var year= reminderDate.getFullYear();
+              var months= ["January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"];
+            var month = months[reminderDate.getMonth()];
 
-<script>
-    var friend={
-         name:"John",
-          birthDate:"1999-7-5",
 
-    };
-    function getBirthdayDetails(){
-        var givenDate=new Date(friend.birthDate);
-        var year= givenDate.getFullYear();
+            var day= reminderDate.getDay();
+            var today= new Date();
+             var yearsPassed = today.getFullYear() - year;
 
-        var months=["January","February","March","April","May","June",
-            "July","August","September","October","November","December"];
-            var month= months[givenDate.getMonth()];
+             var condition= ( today.getMonth() < reminderDate.getMonth() ||
+            (today.getMonth() === reminderDate.getMonth() && today.getDate() < day))? "It has been more than a year since that date": "It has been less than a year since that date"
 
-         var date=givenDate.getDate();  
-         
-         var today=new Date();
-         var age= today.getFullYear()-year;
-         
-         var statement= friend.name +" "+ "was born on"+" "+date + month+ year +"and is "+ age + "years old." 
 
-         document.getElementById("a").innerHTML=statement;
+            document.getElementById("a").innerHTML= year+ " "+month+" "+day;
+              document.getElementById("b").innerHTML= yearsPassed;
+                document.getElementById("c").innerHTML= condition;
 
-    };
+        
 
-    getBirthdayDetails(friend);
 
-</script>
 
+        }
+    </script>
+    
 </body>
 </html>

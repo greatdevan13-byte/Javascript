@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Johns Bday</h2>
+
+<p id="a"></p>
+
+<script>
+    var friend={
+         name:"John",
+          birthDate:"1999-7-5",
+
+    };
+    function getBirthdayDetails(){
+        var givenDate=new Date(friend.birthDate);
+        var year= givenDate.getFullYear();
+
+        var months=["January","February","March","April","May","June",
+            "July","August","September","October","November","December"];
+            var month= months[givenDate.getMonth()];
+
+         var date=givenDate.getDate();  
+         
+         var today=new Date();
+         var age= today.getFullYear()-year;
+         
+         var statement= friend.name +" "+ "was born on"+" "+date + month+ year +"and is "+ age + "years old." 
+
+         document.getElementById("a").innerHTML=statement;
+
+    };
+
+    getBirthdayDetails(friend);
+
+</script>
+
+</body>
+</html>
