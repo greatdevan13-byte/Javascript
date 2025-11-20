@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+let correctNumber = 3;
+let validChances = 0;
+
+for (let i = 1; i <= 5; i++) {
+
+    let guess = parseInt(prompt("Enter a number between 1 and 5:"));
+
+ 
+    switch (guess) {
+        case 1: console.log("You entered: One"); break;
+        case 2: console.log("You entered: Two"); break;
+        case 3: console.log("You entered: Three"); break;
+        case 4: console.log("You entered: Four"); break;
+        case 5: console.log("You entered: Five"); break;
+        default: console.log("Invalid input");
+    }
+
+    if (guess < 1 || guess > 5) {
+       
+        continue;
+    }
+
+    validChances++; 
+
+    if (guess === correctNumber) {
+        console.log("You guessed it right!");
+        break; // Stop the game
+    } else {
+        console.log("Wrong guess. Try again.");
+    }
+}
+
+
+if (validChances === 5) {
+    console.log("Game over");
+}
+
+</script>
+</body>
+</html>
