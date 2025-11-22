@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+const userJson = `{
+
+    "name": "John Doe",
+    "email": "john@example.com",
+    "message": "Hello, this is a test message"
+}
+`;
+
+
+
+const showMessage = () => {
+    try {
+        const userObj = JSON.parse(userJson);      
+        console.log(`Message received from ${userObj.name}`);
+    } catch (error) {
+        console.log("Error: Invalid JSON format");
+    }
+};
+
+
+showMessage();
+
+    </script>
+    
+</body>
+</html>
