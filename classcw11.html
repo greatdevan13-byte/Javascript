@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+class Book{
+    constructor(title,author,price){
+        this.title=title;
+        this.author=author;
+        this.price=price;
+    };
+    get myTitle(){
+        return this.title;
+    };
+    get myAuthor(){
+        return this.author;
+    };
+
+     get myPrice(){
+        return this.price;}
+
+    set myPrice(pr){
+
+        if(typeof pr===Number && pr>0)
+        this.price=pr;
+    };
+}
+
+book1= new Book("Adultery","Paulo Coehlo",550);
+ book1.myPrice=500;
+ book1.myPrice="xyz";
+  document.write("Title: "+book1.myTitle+" <br>Author: "+book1.myAuthor+"<br> Price:  "+book1.myPrice);
+
+</script>
+
+</body>
+</html>	
